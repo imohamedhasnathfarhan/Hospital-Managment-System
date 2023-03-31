@@ -9,8 +9,14 @@ import { Title } from '@angular/platform-browser';
   selector: 'app-root',
   template: '<router-outlet></router-outlet>',
 })
+
 export class AppComponent implements OnInit {
+  
   title = 'CoreUI Free Angular Admin Template';
+  public account = {  
+    password: null  
+  };  
+  public barLabel: string = "Password strength:";  
 
   constructor(
     private router: Router,

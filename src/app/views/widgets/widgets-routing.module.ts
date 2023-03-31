@@ -7,8 +7,17 @@ const routes: Routes = [
     path: '',
     component: WidgetsComponent,
     data: {
-      title: 'Widgets'
-    }
+      title: 'System'
+    },
+    children: [
+      {
+        path: '',
+        component: WidgetsComponent,
+        data: {
+          title: 'Profile',
+        },
+      },
+    ]
   }
 ];
 

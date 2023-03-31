@@ -3,6 +3,17 @@ import { HashLocationStrategy, LocationStrategy, PathLocationStrategy } from '@a
 import { BrowserModule, Title } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ReactiveFormsModule } from '@angular/forms';
+import { PasswordStrengthMeterModule } from 'angular-password-strength-meter';
+import { Ng9PasswordStrengthBarModule } from 'ng9-password-strength-bar';
+import { ToastrModule } from 'ngx-toastr';
+import { FormsModule } from '@angular/forms';
+
+import zxcvbnEnPackage from '@zxcvbn-ts/language-en'
+
+// import { WidgetsComponent } from './views/widgets/widgets/widgets.component';  
+
+import { DefaultHeaderComponent } from './containers/default-layout/default-header/default-header.component';
+
 
 import {
   PERFECT_SCROLLBAR_CONFIG,
@@ -19,7 +30,7 @@ import { AppComponent } from './app.component';
 // Import containers
 import {
   DefaultFooterComponent,
-  DefaultHeaderComponent,
+ 
   DefaultLayoutComponent,
 } from './containers';
 
@@ -42,12 +53,15 @@ import {
   SidebarModule,
   TabsModule,
   UtilitiesModule,
+ 
+
 } from '@coreui/angular';
 
 import { IconModule, IconSetService } from '@coreui/icons-angular';
-import { ProfileComponent } from './views/profile/profile.component';
-import { ProfileviewComponent } from './views/profile/profileview/profileview.component';
-import { ProfileeditComponent } from './views/profile/profileedit/profileedit.component';
+import { PasswordStrengthMeterComponent } from './password-strength-meter/password-strength-meter.component';
+// import { ProfileComponent } from './views/profile/profile.component';
+// import { ProfileviewComponent } from './views/profile/profileview/profileview.component';
+// import { ProfileeditComponent } from './views/profile/profileedit/profileedit.component';
 
 
 const DEFAULT_PERFECT_SCROLLBAR_CONFIG: PerfectScrollbarConfigInterface = {
@@ -58,10 +72,11 @@ const APP_CONTAINERS = [
   DefaultFooterComponent,
   DefaultHeaderComponent,
   DefaultLayoutComponent,
+ 
 ];
 
 @NgModule({
-  declarations: [AppComponent, ...APP_CONTAINERS, ProfileComponent, ProfileviewComponent, ProfileeditComponent],
+  declarations: [AppComponent, ...APP_CONTAINERS, PasswordStrengthMeterComponent],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
@@ -89,6 +104,11 @@ const APP_CONTAINERS = [
     BadgeModule,
     ListGroupModule,
     CardModule,
+    ToastrModule.forRoot(),
+    Ng9PasswordStrengthBarModule,
+    FormsModule,
+    PasswordStrengthMeterModule.forRoot()
+    
     
   ],
   providers: [

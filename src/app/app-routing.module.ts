@@ -6,8 +6,8 @@ import { Page404Component } from './views/pages/page404/page404.component';
 import { Page500Component } from './views/pages/page500/page500.component';
 import { LoginComponent } from './views/pages/login/login.component';
 import { RegisterComponent } from './views/pages/register/register.component';
-import { ProfileviewComponent } from './views/profile/profileview/profileview.component';
-import { ProfileeditComponent } from './views/profile/profileedit/profileedit.component';
+// import { ProfileviewComponent } from './views/profile/profileview/profileview.component';
+// import { ProfileeditComponent } from './views/profile/profileedit/profileedit.component';
 import { AccordionsComponent } from './views/base/accordion/accordions.component';
 
 const routes: Routes = [
@@ -64,7 +64,7 @@ const routes: Routes = [
           import('./views/notifications/notifications.module').then((m) => m.NotificationsModule)
       },
       {
-        path: 'widgets',
+        path: 'profile',
         loadChildren: () =>
           import('./views/widgets/widgets.module').then((m) => m.WidgetsModule)
       },
@@ -73,11 +73,11 @@ const routes: Routes = [
         loadChildren: () =>
           import('./views/pages/pages.module').then((m) => m.PagesModule)
       },
-      {
-        path: 'profile',
-        loadChildren: () =>
-          import('./views/profile/profile.module').then((m) => m.ProfileModule)
-      },
+      // {
+      //   path: 'profile',
+      //   loadChildren: () =>
+      //     import('./views/profile/profile.module').then((m) => m.ProfileModule)
+      // },
       {
         path: 'accordion',
         loadChildren: () =>
@@ -109,28 +109,28 @@ const routes: Routes = [
     }
   },
   {
-    path: 'register',
+    path: 'forgot-password',
     component: RegisterComponent,
     data: {
       title: 'Register Page'
     }
   },
 
-  {
-    path: 'profileview',
-    component: ProfileviewComponent,
-    data: {
-      title: 'Profile View'
-    }
-  },
+  // {
+  //   path: 'profileview',
+  //   component: ProfileviewComponent,
+  //   data: {
+  //     title: 'Profile View'
+  //   }
+  // },
 
-  {
-    path: 'profileedit',
-    component: ProfileeditComponent,
-    data: {
-      title: 'Profile Edit'
-    }
-  },
+  // {
+  //   path: 'profileedit',
+  //   component: ProfileeditComponent,
+  //   data: {
+  //     title: 'Profile Edit'
+  //   }
+  // },
 
   {
     path: 'accordion',

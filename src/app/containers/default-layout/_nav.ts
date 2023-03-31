@@ -206,13 +206,20 @@ export const navItems: INavData[] = [
     ]
   },
   {
-    name: 'Widgets',
-    url: '/widgets',
-    iconComponent: { name: 'cil-calculator' },
-    badge: {
-      color: 'info',
-      text: 'NEW'
-    }
+    name: 'System ',
+    url: '/profile',
+    iconComponent: { name: 'cil-settings' },
+
+    children: [
+      {
+        name: 'Profile',
+        url: '/profile'
+      }
+    ]
+    // badge: {
+    //   color: 'info',
+    //   // text: 'NEW'
+    // }
   },
   {
     title: true,
@@ -228,12 +235,16 @@ export const navItems: INavData[] = [
         url: '/login'
       },
       {
-        name: 'Register',
-        url: '/register'
+        name: 'Forgot-Password',
+        url: '/forgot-password'
       },
       {
         name: 'Error 404',
         url: '/404'
+      },
+      {
+        name: 'Error 500',
+        url: '/500'
       },
       {
         name: 'Error 500',
@@ -243,22 +254,22 @@ export const navItems: INavData[] = [
   },
 
 
-  {
-    name: 'Profile',
-    url: '/profile',
-    iconComponent: { name: 'cil-user' },
-    children: [
-      {
-        name: 'Profile View',
-        url: '/profileview'
-      },
-      {
-        name: 'Profile Edit',
-        url: '/profileedit'
-      }
+  // {
+  //   name: 'Profile',
+  //   url: '/profile',
+  //   iconComponent: { name: 'cil-user' },
+  //   children: [
+  //     {
+  //       name: 'Profile View',
+  //       url: '/profileview'
+  //     },
+  //     {
+  //       name: 'Profile Edit',
+  //       url: '/profileedit'
+  //     }
       
-    ]
-  },
+  //   ]
+  // },
 
 
 ];

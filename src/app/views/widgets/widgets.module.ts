@@ -1,5 +1,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { FormsModule } from '@angular/forms';
+import { Ng9PasswordStrengthBarModule } from 'ng9-password-strength-bar';
 
 import {
   ButtonModule,
@@ -41,7 +43,9 @@ import { WidgetsEComponent } from './widgets-e/widgets-e.component';
     CardModule,
     DocsComponentsModule,
     ProgressModule,
-    ChartjsModule
+    ChartjsModule,
+    FormsModule,
+    Ng9PasswordStrengthBarModule
   ],
   exports: [
     WidgetsBrandComponent,
@@ -49,4 +53,6 @@ import { WidgetsEComponent } from './widgets-e/widgets-e.component';
   ]
 })
 export class WidgetsModule {
+  
+ 
 }
