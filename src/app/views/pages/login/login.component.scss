@@ -149,5 +149,14 @@
     transform: translatey(-50%);
 }
 
-
+.form-control {
+    margin-bottom: 5px;
+    
+  }
+  ng9-password-strength-bar {
+    margin-top: 5px;
+    position: absolute;
+    top: 50%;
+    transform: translatey(-250%);
+  }
 

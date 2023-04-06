@@ -10,6 +10,7 @@ import { ButtonModule, CardModule, FormModule, GridModule } from '@coreui/angula
 import { IconModule } from '@coreui/icons-angular';
 
 import { FormsModule } from '@angular/forms';
+import { Ng9PasswordStrengthBarModule } from 'ng9-password-strength-bar';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,9 @@ import { FormsModule } from '@angular/forms';
     GridModule,
     IconModule,
     FormModule,
-    FormsModule
+    FormsModule,
+    Ng9PasswordStrengthBarModule
+
   ]
 })
 export class PagesModule {
